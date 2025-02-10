@@ -1,0 +1,2 @@
+## Answers
+### 2. 1. The time complexity of this algorithm is O(n) as we do one iteration through the array without nestes loops etc. All the other operations in the algorithm are constants in terms of time complexity. The space complexity of this algorithm is constant O(1) as we use the fixed amount of variables and the array is not modified. The return array is constant as well.
