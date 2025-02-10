@@ -1,7 +1,7 @@
 ## Answers
 ### 3.1
 
-/**
+```/**
 * Eliminate any duplicate numbers in provided array
 * and return only distinct values in the same order.
 *
@@ -16,4 +16,4 @@ deduplicated.push(number);
 }
 });
 return deduplicated;
-}
+}```
