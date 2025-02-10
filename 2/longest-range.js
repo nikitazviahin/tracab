@@ -7,8 +7,6 @@ function findLongestConsecutiveRange(arr) {
   let currentStart = 0;
   let direction = 0;
 
-  let maxSequences = [];
-
   for (let i = 1; i < arr.length; i++) {
     let diff = arr[i] - arr[i - 1];
 
@@ -22,9 +20,6 @@ function findLongestConsecutiveRange(arr) {
         if (currentLen > maxLen) {
           maxLen = currentLen;
           maxStart = currentStart;
-          maxSequences = [[maxStart, maxLen]];
-        } else if (currentLen === maxLen) {
-          maxSequences.push([currentStart, currentLen]);
         }
         currentStart = i - 1;
         currentLen = 2;
@@ -34,9 +29,6 @@ function findLongestConsecutiveRange(arr) {
       if (currentLen > maxLen) {
         maxLen = currentLen;
         maxStart = currentStart;
-        maxSequences = [[maxStart, maxLen]];
-      } else if (currentLen === maxLen) {
-        maxSequences.push([currentStart, currentLen]);
       }
       currentStart = i;
       currentLen = 1;
@@ -47,12 +39,7 @@ function findLongestConsecutiveRange(arr) {
   if (currentLen > maxLen) {
     maxLen = currentLen;
     maxStart = currentStart;
-    maxSequences = [[maxStart, maxLen]];
-  } else if (currentLen === maxLen) {
-    maxSequences.push([currentStart, currentLen]);
   }
-
-  if (maxSequences.length > 0) return maxSequences[0];
 
   return [maxStart, maxLen];
 }
