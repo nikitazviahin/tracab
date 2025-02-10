@@ -19,3 +19,18 @@ function eliminateDuplicates(arrayOfNumbers) {
   return deduplicated;
 }
 ```
+
+### 3.2
+
+```
+/**
+ * Replace a part of the text in string at range [from-to]
+ * with replacement text.
+ *
+ * Example:
+ * replaceText('hello', 2, 3, 'world') === 'heworldlo'
+ */
+function replaceText(text, from, to, replacement) {
+  return text.substring(0, from) + replacement + text.substring(to);
+}
+```
