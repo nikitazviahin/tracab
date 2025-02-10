@@ -1,1 +1,4 @@
-# tracab
+# 1
+## Answers
+### 1. 1. The data extraction depends on format of raw data (most likely it will be a binary data from stream). For the data to be conventional for our system I would parse the data into JSON. 
+### The size of JSON should not be a big problem as I expect data to not be cumulative. The main problem I think may be with parsing of data from many concurrent games as it may cause some overloads inside the system. Probably there should be implemented some sort of scaling for this gateway.
